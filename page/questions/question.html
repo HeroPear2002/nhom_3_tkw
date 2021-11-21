@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore</title>
+   
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../css/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.min.css">
+<link rel="stylesheet" href="question.css">
+<link rel="icon"  href="../img/MicrosoftTeams-image.png">
+</head>
+
+<body>
+    <div id="header">
+        <nav class="navbar   navbar-dark"> 
+         <img class="logo" src="../../general/general_img/logo.png" alt="logo">
+          <label  for="nav-mobile__input" class="list">
+            <img src="../../general/general_img/list.svg" alt="" class="more-list">
+          </label>
+          <input type="checkbox" id="nav-mobile__input" class="nav-mobile__input">
+          <label for="nav-mobile__input" class="nav__overlay"></label>
+          <div for="nav-mobile__input" class="nav-mobile">
+            <a  class="nav-moblie__account  ">
+              <img src="../../general/general_img/list.svg" alt="" class="more-list">
+              <p>Menu</p>
+            </a>
+             <ul class="nav-mobile__list">
+                <li class="nav-mobile__item "><a class="js-nav-moblie__account" >Đăng nhập</a></li>
+                <li class="nav-mobile__item">
+                 <a >Danh Mục</a>
+                 <ul class="nav-category__list">
+                   <li class="nav-category__item"><a href="../../shop/html/danh_muc_tatca.html">Tất cả</a></li>
+                   <li class="nav-category__item"><a href="">Sách phát triển bản thân</a></li>
+                   <li class="nav-category__item"><a href="">Sách phát triển kinh doanh</a></li>
+                   <li class="nav-category__item"><a href="">Sách giáo dục</a></li>
+                   <li class="nav-category__item"><a href="">Tiểu thuyết và Truyện</a></li>
+                   <li class="nav-category__item"><a href="">Khác</a></li>
+                 </ul>
+               </li>
+               <li class="nav-mobile__item"><a href="../../contact/contact.html">Contact</a></li>
+               <li class="nav-mobile__item"><a href="../../blog/blog.html">Blog</a></li>
+               <li class="nav-mobile__item"><a href="">Page</a></li>
+             </ul>
+             <label for="nav-mobile__input">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+              </svg>
+             </label>
+             
+          </div>
+       
+          <form class="form-inline" action="/action_page.php">
+           
+            <div class="input-group ">
+             
+              <input type="text" placeholder="    Search...">
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+            </svg>
+          </form>
+          
+          <div class="login js-login1">
+              <a href="#"> 
+               Sign in
+              </a>
+          </div>
+          <div class="login js-login2">
+            <a href="#"> 
+              Register
+            </a>
+        </div>
+        </nav>
+        <div class="subnav">
+          <ul>
+            <li>
+             <a href="../../Home/home.html">Home</a>
+            </li>
+            <li>
+              <a href="#">
+                Shop
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                </svg>
+              </a>
+              <ul class="category">
+                <li><a href="../../shop/html/danh_muc_tatca.html">Tất cả</a></li>
+                <li><a href="">Sách phát triển bản thân</a></li>
+                <li><a href="">Sách phát triển kinh doanh </a></li>
+                <li><a href="">Sách giáo dục</a></li>
+                <li><a href="">Tiểu thuyết và Truyện</a></li>
+                <li><a href="">Khác</a></li>
+              </ul>
+            </li>
+            <li >
+              <a href="../../blog/blog.html">Blog</a>
+            </li>
+            <li >
+              <a href="../../contact/contact.html">Contact</a>
+            </li>
+            <li >
+              <a href="#">Page
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                </svg>
+              </a>
+              <ul class="category">
+                <li><a href="../about/about.html">About us.</a></li>
+                <li><a href="../policy/poli.html">Điều khoản & Bảo mật.</a></li>
+                <li><a href="../questions/question.html">Câu hỏi thường gặp.</a></li>
+            </ul>
+            </li>
+         </ul>
+        </div>
+    </div>
+    <br>
+    <section class="aboutus" >
+        <div class="tieude" style="font-family: 'Times New Roman', Times, serif;">
+            <h1 style="margin-top: 112px;">Những câu hỏi thường gặp.</h1>
+        </div> <br>
+        </div>
+    </section>
+    <div class="row chan">
+            <div id="accordion" style="text-align: center;">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                            Câu hỏi 1.
+                        </a>
+                    </div>
+                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                            Câu hỏi 2.
+                        </a>
+                    </div>
+                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                            Câu hỏi 3.
+                        </a>
+                    </div>
+                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+                            Câu hỏi 4
+                        </a>
+                    </div>
+                    <div id="collapseFour" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseFive">
+                            Câu hỏi 5.
+                        </a>
+                    </div>
+                    <div id="collapseFive" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseSix">
+                            Câu hỏi 6.
+                        </a>
+                    </div>
+                    <div id="collapseSix" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <br>
+    <div class="footer">
+        <div id="footer1">
+            <div>
+                <a >
+                    <img src="../img/icon_fb.png" alt="Facebook">
+                    <span>FACEBOOK</span>
+                </a>
+            </div>
+            <div>
+                <a >
+                    <img src="../img/icon_ins.png" alt="INSTAGRAM">
+                    <span>INSTAGRAM</span>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="../img/icon_link.png" alt="LINKEDIN">
+                    <span>LINKEDIN</span>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="../img/icon_prin.png" alt="PINTEREST">
+                    <span>PINTEREST</span>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="../img/icon_redis.png" alt="REDDIT">
+                    <span>REDDIT</span>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="../img/icon_tw.png" alt="TWITTER">
+                    <span>TWITTER</span>
+                </a>
+            </div>
+        </div>
+        <div class="row" id="footer2">
+            <div class="col-lg-8">
+                <ul>
+                    <li><a href="#">Book Store</a></li>
+                    <li><a href="#">About us – Author team</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Group Sách Only</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4" id="lienhe">
+                <p>© Liên hệ: Nhóm 3 Thiết kế web - CNTT2</p>
+            </div>
+        </div>
+    </div>
+    <script src="../jvs/jvs.js"></script>
+</body>
+</html>

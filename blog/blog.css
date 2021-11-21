@@ -1,0 +1,175 @@
+body{
+    margin: auto;
+}
+.row{
+
+    margin-left: 0px;
+    margin-right: 0px;
+}
+main{
+    background-color: #F5F4F4;
+    margin-top: 8%;
+}
+main div div:nth-child(1){
+    background-color: #F5F4F4;
+}
+main div div:nth-child(3){
+    background-color: #F5F4F4;
+}
+article{
+    display: inline-block;
+    margin: 40px 0;
+    background-color: white;
+    height: 235px;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+article a{
+    text-decoration: none;
+    color: black;
+}
+article a:hover{
+    text-decoration: none;
+    color: mediumturquoise;
+}
+main div div:nth-child(2) img{
+    float:left;
+    margin-right: 10px;
+}
+article a h1{
+    clear:right;
+    font-size: 35px;
+    padding-top: 10px;
+}
+main div div:nth-child(2) div article h6{
+    font-size: 15px;
+}
+article button{
+    width: 140px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #79a205;
+    border-style: none;
+    border-radius: 10px;
+    color: white;
+    transition-duration: 0.4s;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+}
+article button:hover{
+    background-color: mediumturquoise;
+    color: white;
+}
+footer{
+    background-color: #F5F4F4;
+}
+.page{
+    display:inline-flex;
+    margin: 0 40%;
+    margin-bottom: 30px;
+    list-style: none;
+}
+.page button{
+    background-color: #79a205;
+    border-style: none;
+    color: white;
+    height: 30px;
+    width: 30px;
+}
+.page button:hover{
+    background-color: mediumturquoise;
+    color: white;
+}
+#footer{
+    background-color: #79a205;
+    border-style: none;
+    color: white;
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    height: 5%;
+    width: 3%;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+@media screen and (max-width: 800px){
+    article{
+        display: inline-block;
+        margin: 25px 15px;
+        background-color: white;
+        height: 143px;
+        width: 100%;
+    }
+    main div div:nth-child(2) img{
+        height: 143px;
+        width: 198px;
+        float:left;
+        margin-right: 10px;
+    }
+    article a h1{
+        clear:right;
+        font-size: 23px;
+    }
+    article button{
+        width: 78px;
+        height: 25px;
+        font-size: 15px;
+        background-color: #79a205;
+        border-radius: 10px;
+        color: white;
+        transition-duration: 0.4s;
+    }
+    main div div:nth-child(2) div article p{
+        display: none;
+    }
+    #footer{
+        position: fixed;
+        bottom: 1%;
+        right: 1%;
+        height: 30px;
+        width: 30px;
+        font-size: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+    }
+}
+@media screen and (max-width: 480px){
+    article{
+        display: inline-block;
+        margin: 20px 15px;
+        background-color: white;
+        height: 72px;
+        width: 100%;
+    }
+    main div div:nth-child(2) img{
+        height: 72px;
+        width: 100px;
+        float:left;
+        margin-right: 10px;
+    }
+    article a h1{
+        clear:right;
+        font-size: 15px;
+    }
+    main div div:nth-child(2) div article h6{
+        font-size: 10px;
+    }
+    main div div:nth-child(2) div article p{
+        display: none;
+    }
+    article button{
+        display: none;
+    }
+    #footer{
+        position: fixed;
+        bottom: 1%;
+        right: 1%;
+        height: 30px;
+        width: 30px;
+        font-size: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+    }
+}
+
