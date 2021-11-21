@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore</title>
+   
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../css/list-sp.css">
+<link rel="stylesheet" href="../../general/font/all.min.css">
+<link rel="stylesheet" href="../css/sanPham.css">
+<link rel="icon"  href="../general/general_img/icon_web.png">
+<link rel="stylesheet" href="../../general/general.css">
+
+</head>
+<body>
+  <div id="header">
+    <nav class="navbar   navbar-dark"> 
+     <img class="logo" src="../../general/general_img/logo.png" alt="logo">
+      <label  for="nav-mobile__input" class="list">
+        <img src="../../general/general_img/list.svg" alt="" class="more-list">
+      </label>
+      <input type="checkbox" id="nav-mobile__input" class="nav-mobile__input">
+      <label for="nav-mobile__input" class="nav__overlay"></label>
+      <div for="nav-mobile__input" class="nav-mobile">
+        <a  class="nav-moblie__account  ">
+          <img src="../../general/general_img/list.svg" alt="" class="more-list">
+          <p>Menu</p>
+        </a>
+         <ul class="nav-mobile__list">
+            <li class="nav-mobile__item "><a class="js-nav-moblie__account" >Đăng nhập</a></li>
+            <li class="nav-mobile__item">
+             <a >Danh Mục</a>
+             <ul class="nav-category__list">
+               <li class="nav-category__item"><a href="">Tất cả</a></li>
+               <li class="nav-category__item"><a href="">Sách phát triển bản thân</a></li>
+               <li class="nav-category__item"><a href="">Sách phát triển kinh doanh</a></li>
+               <li class="nav-category__item"><a href="">Sách giáo dục</a></li>
+               <li class="nav-category__item"><a href="">Tiểu thuyết và Truyện</a></li>
+               <li class="nav-category__item"><a href="">Khác</a></li>
+             </ul>
+           </li>
+           <li class="nav-mobile__item"><a href="../../contact/contact.html">Contact</a></li>
+           <li class="nav-mobile__item"><a href="../../blog/blog.html">Blog</a></li>
+           <li class="nav-mobile__item"><a href="../../page/about/about.html">Page</a></li>
+         </ul>
+         <label for="nav-mobile__input">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+            <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+          </svg>
+         </label>
+         
+      </div>
+   
+      <form class="form-inline" action="/action_page.php">
+       
+        <div class="input-group ">
+         
+          <input type="text" placeholder="    Search...">
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+        </svg>
+      </form>
+      
+      <div class="login js-login1">
+          <a href="#"> 
+           Sign in
+          </a>
+      </div>
+      <div class="login js-login2">
+        <a href="#"> 
+          Register
+        </a>
+    </div>
+    </nav>
+    <div class="subnav">
+      <ul>
+        <li>
+         <a href="../../Home/home.html">Home</a>
+        </li>
+        <li>
+          <a href="#">
+            Shop
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+              <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+            </svg>
+          </a>
+          <ul class="category">
+            <li><a href="">Tất cả</a></li>
+            <li><a href="">Sách phát triển bản thân</a></li>
+            <li><a href="">Sách phát triển kinh doanh </a></li>
+            <li><a href="">Sách giáo dục</a></li>
+            <li><a href="">Tiểu thuyết và Truyện</a></li>
+            <li><a href="">Khác</a></li>
+          </ul>
+        </li>
+        <li >
+          <a href="../../blog/blog.html">Blog</a>
+        </li>
+        <li >
+          <a href="../../contact/contact.html">Contact</a>
+        </li>
+        <li >
+          <a href="#">Page
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+              <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+            </svg>
+          </a>
+          <ul class="category">
+            <li><a href="../../page/about/about.html">About us.</a></li>
+            <li><a href="../../page/policy/poli.html">Điều khoản & Bảo mật.</a></li>
+            <li><a href="../../page/questions/question.html">Câu hỏi thường gặp.</a></li>
+        </ul>
+        </li>
+     </ul>
+    </div>
+</div>
+<div class="header__mobile">
+  <a href="./danh_muc_tatca.html" class="come-back">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+  <div class="ba_cham">
+  <i class="fas fa-ellipsis-h"></i>
+  </div>
+</div> 
+<div class="modal js-modal1">
+  <div class="modal-inner js-modal-inner">
+    <div class="auth-form">
+      <div class="auth-form__header"> 
+        <div class="auth-form__heading">Đăng nhập</div>
+    </div>
+    <form>
+      <div class="form-row">
+        <div class="">
+          <label for="validationDefault01">Tên Đăng Nhập</label>
+          <input type="text" class="form-control" id="validationDefault01" placeholder=" Name" value="" required>
+        </div>
+        <div class="">
+          <label for="validationDefault02">Mật Khẩu</label>
+          <input  type="password" class="form-control" id="validationDefault02" placeholder="password" value="" required>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+          <label class="form-check-label" for="invalidCheck2">
+             đồng ý điều khoản của shop
+          </label>
+        </div>
+      </div>
+      <button class="btn btn-success" type="submit">Đăng nhập</button>
+    </form>
+    
+    </div>
+    <div class="auth-form__socials">
+      <a href="https://vi-vn.facebook.com/" class="auth-form__socials__facebook">
+       <i class="fab fa-facebook-square"></i>
+       Đăng nhập bằng Facebook
+      </a>
+      <a href="https://accounts.google.com/signin/v2/identifier?passive=1209600&continue=https%3A%2F%2Fcontacts.google.com%2F%3Fhl%3Dvi&followup=https%3A%2F%2Fcontacts.google.com%2F%3Fhl%3Dvi&hl=vi&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="auth-form__socials__google">
+       <i class="fab fa-google"></i>
+      Đăng nhập bằng Google
+      </a>
+    </div>
+    <div class="modal-inner__close">
+      <i class="fas fa-times js-close"></i>
+    </div> 
+  </div>
+       
+</div>
+<div class="modal js-modal2 ">
+  <div class="modal-inner js-modal-inner">
+    <div class="auth-form">
+      <div class="auth-form__header"> 
+        <div class="auth-form__heading">Đăng nhập</div>
+    </div>
+    <form onsubmit="return Formvalidate();">
+      <div class="form-row">
+        <div class="">
+          <label for="validationDefault01">Tên Đăng Nhập</label>
+          <input type="text" class="form-control" id="validationDefault01" placeholder=" Name" value="" required>
+        </div>
+        <div class="">
+          <label for="validationDefault02">email</label>
+          <input  type="text" class="form-control"  id="aaaaaa" placeholder="email" value="" required>
+          <span id="errorEmail" class="text-small red"></span>
+        </div>
+        <div class="">
+          <label for="validationDefault02" >Mật Khẩu</label>
+          <input  type="password" class="form-control" id="aaaaaa1" placeholder="password" value="" required>
+          <span id="errorPassword" class=" text-small red"></span>
+        </div>
+        <div class="">
+          <label for="validationDefault02"> Nhập lại Mật Khẩu</label>
+          <input  type="password" class="form-control" id="aaaaaa2" placeholder="nhập lại password" value="" required>
+          <span id="again-errorPassword" class=" text-small red"></span>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+          <label class="form-check-label" for="invalidCheck2">
+             đồng ý điều khoản của shop
+          </label>
+        </div>
+      </div>
+      <button class="btn btn-success" type="submit">Đăng nhập</button>
+    </form>
+    
+    </div>
+    <div class="auth-form__socials">
+      <a href="https://vi-vn.facebook.com/" class="auth-form__socials__facebook">
+       <i class="fab fa-facebook-square"></i>
+       Đăng kí bằng Facebook
+      </a>
+      <a href="https://accounts.google.com/signin/v2/identifier?passive=1209600&continue=https%3A%2F%2Fcontacts.google.com%2F%3Fhl%3Dvi&followup=https%3A%2F%2Fcontacts.google.com%2F%3Fhl%3Dvi&hl=vi&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="auth-form__socials__google">
+       <i class="fab fa-google"></i>
+      Đăng kí bằng Google
+      </a>
+    </div>
+    <div class="modal-inner__close">
+      <i class="fas fa-times js-close2"></i>
+    </div> 
+  </div>
+       
+</div>
+<div class="container-content"> 
+  <div class="path-page">
+  <ul class="page-list">
+     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+          <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+     </svg>
+      <li class="page-item-link"><a href="">Trang Chủ</a></li>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link bi-chevron-double-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+        <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+      </svg>
+      <li class="page-item-link"><a href="./danh_muc_tatca.html">Tất Cả</a></li>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link bi-chevron-double-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+        <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+      </svg>
+      <li class="page-item-link"><a href="">Tuổi Trẻ Đáng Giá Bao Nhiêu ?</a></li>
+  </ul>
+  </div>
+  <div class="details-book">
+    <div class="details-book__sell">
+        <div class="details-book__sell__img">
+            <img src="../img/book/book1.jpg" alt="anh" class="details-book__sell__img__book">
+            <div class="details-book__sell__text__content__money hide-pc">
+              <div class="discount-money"> <del>99.000đ</del><span>69.000 đ</span>
+                <div class="discount-sub">
+                  <span class="percent-sub">30%</span>
+                  <span class="white">Giảm</span>
+                </div> 
+              </div>
+            </div>
+            <div class="details-book__sell__share">
+                <span>Chia Sẻ : </span>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-facebook-messenger"></i>
+                <i class="fab fa-pinterest-square"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+            
+            <div class="details-book__buy mobile_fixed">
+              <div class="details-book__buy__add-cart details-book__buy__add-cart__mobile">Thêm vào giỏ hàng<i class="fas fa-cart-plus"></i></div>
+              <button type="button" class="btn btn-danger btn-danger__mobile">Mua Ngay</button>
+          </div>
+        </div>
+        <div class="details-book__sell__text">
+            <div class="details-book__sell__text__heading">
+                <h4>Tuổi Trẻ Đáng Giá Bao Nhiêu</h4>
+            </div>
+            <div class="details-book__sell__text__content">
+                  <div class="sell-rating-sub">
+                    <div class="rating-sub">
+                      <span >4.9</span>
+                      <img class="big" src="../img/khac/sao_100.jpg" alt="star">
+                      <img class="big" src="../img/khac/sao_100.jpg" alt="star">
+                      <img class="big" src="../img/khac/sao_100.jpg" alt="star">
+                      <img class="big" src="../img/khac/sao_100.jpg" alt="star">
+                      <img class="big" src="../img/khac/sao_100.jpg" alt="star">  
+                    </div>
+                    <div class="sell">đã bán 1.1k</div>
+                    <p>Đánh Giá: 937 lượt</p>
+                  </div>
+                <div class="details-book__sell__text__content__money">
+                    <div class="discount-money"> <del>99.000đ</del><span>69.000 đ</span>
+                      <div class="discount-sub">
+                        <span class="percent-sub">30%</span>
+                        <span class="white">Giảm</span>
+                      </div> 
+                    </div>
+                </div>
+                <div class="details-book__sell__text__content__transport">
+                       <p class="transport-heading">Vận Chuyển: <i class="fas fa-truck-moving"></i></p>
+                        <p>Vận Chuyển Tới: <span> Hà Nội</span> <i class="fas fa-chevron-down"></i></p>
+                        <p>Phí Vận Chuyển: <span>Không hỗ trợ</span></p>
+                </div>
+                <div class="details-book__buy">
+                    <div class="details-book__buy__add-cart">Thêm vào giỏ hàng<i class="fas fa-cart-plus"></i></div>
+                    <button type="button" class="btn btn-danger">Mua Ngay</button>
+                </div>
+            </div>
+            
+            <div class="details-book__sell__text__Service">
+              <div class="details-book__sell__text__Service__item">
+                    <img src="../img/khac/quaydau.png" alt="">
+                    <span>7 ngày miễn phí trả hàng</span>
+              </div>
+              <div class="details-book__sell__text__Service__item">
+                    <img src="../img/khac/xatai.png" alt="">
+                    <span>Hàng chính hãng 100%</span>
+              </div>
+              <div class="details-book__sell__text__Service__item">
+                <img src="../img/khac/mienphivc.png" alt="">
+                <span>Miễn phí vận chuyển</span>
+
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="details-book__buy details-book__buy__tablet">
+      <div class="details-book__buy__add-cart">Thêm vào giỏ hàng<i class="fas fa-cart-plus"></i></div>
+      <button type="button" class="btn btn-danger">Mua Ngay</button>
+    </div>
+    <div class="details-book__sell__text__Service details-book__sell__text__Service__tablet">
+      <div class="details-book__sell__text__Service__item">
+            <img src="../img/khac/quaydau.png" alt="">
+            <span>7 ngày miễn phí trả hàng</span>
+      </div>
+      <div class="details-book__sell__text__Service__item">
+            <img src="../img/khac/xatai.png" alt="">
+            <span>Hàng chính hãng 100%</span>
+      </div>
+      <div class="details-book__sell__text__Service__item">
+        <img src="../img/khac/mienphivc.png" alt="">
+        <span>Miễn phí vận chuyển</span>
+
+      </div>
+    </div>
+  </div>
+  <div class="product-introduction-descrip">
+  <div class="product-introduction-descrip_cmt__left">
+     <div class="product-introduction-descrip_left">
+      <h3 class="product-introduction-descrip__heading">Chi Tiết Sản Phẩm</h3>
+      <ul class="product-introduction-descrip__content">
+          <li class="product-introduction-descrip__content-item">Danh Mục: <span>Sách phát triển bản thân</span></li><br>
+          <li class="product-introduction-descrip__content-item">Thương hiệu: <span>Nhiều tác giả</span></li><br>
+          <li class="product-introduction-descrip__content-item">Ngôn ngữ: <span>Tiếng Việt</span></li><br>
+          <li class="product-introduction-descrip__content-item">Kho Hàng: <span>1896</span></li><br>
+      </ul>
+      <h3 class="product-introduction-descrip__heading">Mô Tả Sản Phẩm</h3>
+      <ul>
+        <li class="product-introduction-descrip__content-item text">Công ty phát hành	Nhã Nam</li>
+        <li class="product-introduction-descrip__content-item text">Tác giả:&emsp;&emsp;&emsp;Rosie Nguyễn</li>
+        <li class="product-introduction-descrip__content-item text">Ngày xuất bản:&ensp;	10-2020</li>
+        <li class="product-introduction-descrip__content-item text">Kích thướ:&emsp;&emsp;	14 x 20.5 cm</li>
+        <li class="product-introduction-descrip__content-item text">Nhà xuất bản:&ensp;	Nhà Xuất Bản Hội Nhà Văn</li>
+        <li class="product-introduction-descrip__content-item text">Loại bìa: &emsp;&emsp;	Bìa mềm</li>
+        <li class="product-introduction-descrip__content-item text">Số trang:	&emsp;&emsp; 285</li>
+        <li class="product-introduction-descrip__content-item text">SKU:	&emsp;&emsp; 2431864615280</li>
+        <li class="product-introduction-descrip__content-item text">Tuổi Trẻ Đáng Giá Bao Nhiêu</li><br><br>
+      </ul>
+      <div class="product-introduction-descrip__mobile">
+
+        <div  class="see-more" data-toggle="collapse" data-target="#demo">xem thêm</div>
+        <div id="demo" class="collapse">
+          <ul class="product-introduction-descrip__content block ">
+            <li class="product-introduction-descrip__content-item text"><span>"Bạn hối tiếc vì không nắm bắt lấy một cơ hội nào đó, chẳng có ai phải mất ngủ.</span></li><br>
+            <li class="product-introduction-descrip__content-item text"><span>Bạn trải qua những ngày tháng nhạt nhẽo với công việc bạn căm ghét, người ta chẳng hề bận lòng.</span></li><br>
+            <li class="product-introduction-descrip__content-item text"><span>Bạn có chết mòn nơi xó tường với những ước mơ dang dở, đó không phải là việc của họ.</span></li><br>
+            <li class="product-introduction-descrip__content-item text"><span>Suy cho cùng, quyết định là ở bạn. Muốn có điều gì hay không là tùy bạn. <span></span></span></li><br>
+            <li class="product-introduction-descrip__content-item text"> <span>Nên hãy làm những điều bạn thích. Hãy đi theo tiếng nói trái tim. Hãy sống theo cách bạn cho là mình nên sống.</span></li><br>
+            <li class="product-introduction-descrip__content-item text"> <span>Vì sau tất cả, chẳng ai quan tâm."</span></li><br>
+            <li class="product-introduction-descrip__content-item text"> <span>Nhận định</span></li><br>
+            <li class="product-introduction-descrip__content-item text"> <span>"Tôi đã đọc quyển sách này một cách thích thú. Có nhiều kiến thức và kinh nghiệm hữu ích, những điều mới mẻ ngay cả với người gần trung niên như tôi.</span></li><br>
+            <li class="product-introduction-descrip__content-item text"> <span>Tuổi trẻ đáng giá bao nhiêu? được tác giả chia làm 3 phần: HỌC, LÀM, ĐI.</span></li><br>
+            <li class="product-introduction-descrip__content-item text"> <span>Nhưng tôi thấy cuốn sách còn thể hiện một phần thứ tư nữa, đó là ĐỌC.</span></li><br>
+            <li class="product-introduction-descrip__content-item text"> <span>Hãy đọc sách, nếu bạn đọc sách một cách bền bỉ, sẽ đến lúc bạn bị thôi thúc không ngừng bởi ý muốn viết nên cuốn sách của riêng mình.</span></li><br>
+            <li class="product-introduction-descrip__content-item text"> <span>Nếu tôi còn ở tuổi đôi mươi, hẳn là tôi sẽ đọc Tuổi trẻ đáng giá bao nhiêu? nhiều hơn một lần."</span></li><br>
+            <li class="product-introduction-descrip__content-item text"> <span>(Đặng Nguyễn Đông Vy, tác giả, nhà báo)</span></li><br>
+          </ul>
+        </div>
+      </div>
+      
+      <ul class="product-introduction-descrip__content hide-mobile">
+        <li class="product-introduction-descrip__content-item text"><span>"Bạn hối tiếc vì không nắm bắt lấy một cơ hội nào đó, chẳng có ai phải mất ngủ.</span></li><br>
+        <li class="product-introduction-descrip__content-item text"><span>Bạn trải qua những ngày tháng nhạt nhẽo với công việc bạn căm ghét, người ta chẳng hề bận lòng.</span></li><br>
+        <li class="product-introduction-descrip__content-item text"><span>Bạn có chết mòn nơi xó tường với những ước mơ dang dở, đó không phải là việc của họ.</span></li><br>
+        <li class="product-introduction-descrip__content-item text"><span>Suy cho cùng, quyết định là ở bạn. Muốn có điều gì hay không là tùy bạn. <span></span></span></li><br>
+        <li class="product-introduction-descrip__content-item text"> <span>Nên hãy làm những điều bạn thích. Hãy đi theo tiếng nói trái tim. Hãy sống theo cách bạn cho là mình nên sống.</span></li><br>
+        <li class="product-introduction-descrip__content-item text"> <span>Vì sau tất cả, chẳng ai quan tâm."</span></li><br>
+        <li class="product-introduction-descrip__content-item text"> <span>Nhận định</span></li><br>
+        <li class="product-introduction-descrip__content-item text"> <span>"Tôi đã đọc quyển sách này một cách thích thú. Có nhiều kiến thức và kinh nghiệm hữu ích, những điều mới mẻ ngay cả với người gần trung niên như tôi.</span></li><br>
+        <li class="product-introduction-descrip__content-item text"> <span>Tuổi trẻ đáng giá bao nhiêu? được tác giả chia làm 3 phần: HỌC, LÀM, ĐI.</span></li><br>
+        <li class="product-introduction-descrip__content-item text"> <span>Nhưng tôi thấy cuốn sách còn thể hiện một phần thứ tư nữa, đó là ĐỌC.</span></li><br>
+        <li class="product-introduction-descrip__content-item text"> <span>Hãy đọc sách, nếu bạn đọc sách một cách bền bỉ, sẽ đến lúc bạn bị thôi thúc không ngừng bởi ý muốn viết nên cuốn sách của riêng mình.</span></li><br>
+        <li class="product-introduction-descrip__content-item text"> <span>Nếu tôi còn ở tuổi đôi mươi, hẳn là tôi sẽ đọc Tuổi trẻ đáng giá bao nhiêu? nhiều hơn một lần."</span></li><br>
+        <li class="product-introduction-descrip__content-item text"> <span>(Đặng Nguyễn Đông Vy, tác giả, nhà báo)</span></li><br>
+      </ul>
+      </div>
+      <div class="product-introduction-descrip_cmt">
+          <h4 class="product-introduction-descrip_cmt_heading">Đánh Giá Sách</h4>
+          <div class="reviews-cmt">
+              <div class="average-star">
+                <p>4.9 &nbsp<span>trên 5</span></p>
+               
+                  <div class="rating">
+                    <img class="big" src="../img/khac/sao_100.jpg" alt="star">
+                    <img class="big" src="../img/khac/sao_100.jpg" alt="star">
+                    <img class="big" src="../img/khac/sao_100.jpg" alt="star">
+                    <img class="big" src="../img/khac/sao_100.jpg" alt="star">
+                    <img class="big" src="../img/khac/sao_100.jpg" alt="star">  
+                  </div>
+              
+              </div>
+              <ul class="reviews-cmt__list-star">
+                  <li class="reviews-cmt__item-star"><a href="">Tất cả</a></li>
+                  <li class="reviews-cmt__item-star"><a href="">5 sao (1023)</a></li>
+                  <li class="reviews-cmt__item-star"><a href="">4 sao (69)</a></li>
+                  <li class="reviews-cmt__item-star"><a href="">3 sao (36)</a></li>
+                  <li class="reviews-cmt__item-star"><a href="">2 sao (17)</a></li>
+                  <li class="reviews-cmt__item-star"><a href="">1 sao (4)</a></li>
+              </ul>
+              <div class="reviews-cmt__list-star__mobile">
+                xem tất cả<i class="fas fa-angle-double-right"></i>
+              </div>
+          </div>
+          <div class="shop-product-rating-client">
+            <div class="shop-product-rating">
+              <div class="shop-product-rating__avatar">
+                  <img src="../img/khac/avt.jpg" alt="">
+              </div>
+              <div class="shop-product-rating__main">
+                  <p>Tùng Phạm</p>
+                  <div class="rating">
+                    <img src="../img/khac/sao_100.jpg" alt="star">
+                    <img src="../img/khac/sao_100.jpg" alt="star">
+                    <img src="../img/khac/sao_100.jpg" alt="star">
+                    <img src="../img/khac/sao_100.jpg" alt="star">
+                    <img src="../img/khac/sao_100.jpg" alt="star">  
+                  </div>
+                  <p class="shop-product-rating__main__cmt">
+                    Tuổi trẻ được xem là lứa tuổi đẹp nhất của một đời người, thế nhưng có bao giờ khi tuổi xuân qua đi, bạn lại cảm thấy tiếc nuối vì những gì mà mình chưa làm được không?  Sách đẹp nha anh chị em
+                  </p>
+                    <div class="img-reviews-list">
+                        <img src="../img/khac/tuoi tre dang gia bn review 1.jpg" alt="" class="img-reviews-item">
+                        <img src="../img/khac/tuoi tre dang gia bn review 2.jpg" alt="" class="img-reviews-item">
+                        <img src="../img/khac/tuoi tre dang gia bn review 3.jpg" alt="" class="img-reviews-item">
+                    </div>
+                    <div class="time_cmt">12-10-2012 &nbsp; 10:35</div>
+                    <div class="useful">
+                      <i class="far fa-thumbs-up"></i>
+                      Hữu ích ?
+                    </div>
+              </div>
+              
+            </div>
+            <div class="shop-product-rating">
+              <div class="shop-product-rating__avatar">
+                  <img src="../img/khac/avt_quang.jpg" alt="">
+              </div>
+              <div class="shop-product-rating__main">
+                  <p>Mạnh Quang</p>
+                  <div class="rating">
+                    <img src="../img/khac/sao_100.jpg" alt="star">
+                    <img src="../img/khac/sao_100.jpg" alt="star">
+                    <img src="../img/khac/sao_100.jpg" alt="star">
+                    <img src="../img/khac/sao_100.jpg" alt="star">
+                    <img src="../img/khac/sao_100.jpg" alt="star">  
+                  </div>
+                  <p class="shop-product-rating__main__cmt">
+                    Sách đẹp bìa sách cứng cáp nhận hàng sờ bìa thích thực sự, rất ý nghĩa
+                  </p>
+                    <div class="img-reviews-list">
+                        <img src="../img/khac/tuoi tre dang gia bn review 1.jpg" alt="" class="img-reviews-item">
+                        <img src="../img/khac/tuoi tre dang gia bn review 2.jpg" alt="" class="img-reviews-item">
+                        <img src="../img/khac/tuoi tre dang gia bn review 3.jpg" alt="" class="img-reviews-item">
+                    </div>
+                    <div class="time_cmt">12-11-2021 &nbsp; 15:35</div>
+                    <div class="useful">
+                      <i class="far fa-thumbs-up"></i>
+                      Hữu ích ?
+                    </div>
+              </div>
+              
+            </div>
+            <div class="shop-product-rating">
+              <div class="shop-product-rating__avatar">
+                  <img src="../img/khac/avt.jpg" alt="">
+              </div>
+              <div class="shop-product-rating__main">
+                  <p>Tùng Phạm</p>
+                  <div class="rating">
+                    <img src="../img/khac/sao_100.jpg" alt="star">
+                    <img src="../img/khac/sao_100.jpg" alt="star">
+                    <img src="../img/khac/sao_100.jpg" alt="star">
+                    <img src="../img/khac/sao_100.jpg" alt="star">
+                    <img src="../img/khac/sao_100.jpg" alt="star">  
+                  </div>
+                  <p class="shop-product-rating__main__cmt">
+                    Tuổi trẻ được xem là lứa tuổi đẹp nhất của một đời người, thế nhưng có bao giờ khi tuổi xuân qua đi, bạn lại cảm thấy tiếc nuối vì những gì mà mình chưa làm được không?  Sách đẹp nha anh chị em
+                  </p>
+                    <div class="img-reviews-list">
+                        <img src="../img/khac/tuoi tre dang gia bn review 1.jpg" alt="" class="img-reviews-item">
+                        <img src="../img/khac/tuoi tre dang gia bn review 2.jpg" alt="" class="img-reviews-item">
+                        <img src="../img/khac/tuoi tre dang gia bn review 3.jpg" alt="" class="img-reviews-item">
+                    </div>
+                    <div class="time_cmt">12-10-2012 &nbsp; 10:35</div>
+                    <div class="useful">
+                      <i class="far fa-thumbs-up"></i>
+                      Hữu ích ?
+                    </div>
+              </div>
+              
+            </div>
+            
+            <div class="previous-next">
+              <ul class="pagination">
+                <li class="page-item disabled"><a class="page-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                    <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                  </svg>
+                </a></li>
+                <li class="page-item"><a class="page-link green" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+                </a></li>
+              </ul>
+            </div>
+          </div>
+         
+          <div class="shop-product-rating">
+            <div class="shop-product-rating__avatar">
+                <img src="../img/khac/avt.jpg" alt="">
+            </div>
+            <div class="shop-product-rating__main">
+              <input type="text" placeholder=" Nhập bình luận của bạn tại đây">
+            </div>
+            
+          </div>
+      </div>
+  </div>
+   
+  <div class="product-introduction-descrip_right">
+    <div class="right__advertisement">  
+      <h4>Sách Bán Chạy</h4>
+      <a href="" class="right__advertisement__book-item">
+        
+          <div class="right__advertisement__img-book-info">
+            
+            <img src="../img/book/book9.jpg" alt="" class="book ">
+          </div>
+          <p class="right__advertisement__name-book">tôi vỡ tan để ánh sáng ngập tràn</p>
+          <p class="right__advertisement__discount-money"> <span>68.000 đ</span></p>
+      </a> 
+      <a href="" class="right__advertisement__book-item">
+        
+        <div class="right__advertisement__img-book-info">
+          
+          <img src="../img/book/book8.jpg" alt="" class="book ">
+        </div>
+        <p class="right__advertisement__name-book">hôm nay hãy chỉ yêu thôi</p>
+        <p class="right__advertisement__discount-money"> <span>78.000 đ</span></p>
+      </a>
+      <a href="" class="right__advertisement__book-item">
+        
+        <div class="right__advertisement__img-book-info">
+          
+          <img src="../img/book/book6.jpg" alt="" class="book ">
+        </div>
+        <p class="right__advertisement__name-book">tâm lí học tội phạm</p>
+        <p class="right__advertisement__discount-money"> <span>104.000 đ</span></p>
+        </a> 
+        <a href="" class="right__advertisement__book-item">
+        
+          <div class="right__advertisement__img-book-info">
+            
+            <img src="../img/book/book7.jpg" alt="" class="book ">
+          </div>
+          <p class="right__advertisement__name-book">những gì đã qua đừng nghĩ lại quá nhiều</p>
+          <p class="right__advertisement__discount-money"> <span>48.000 đ</span></p>
+        </a>
+        <a href="" class="right__advertisement__book-item">
+        
+          <div class="right__advertisement__img-book-info">
+            
+            <img src="../img/book/book3.jpg" alt="" class="book ">
+          </div>
+          <p class="right__advertisement__name-book">Tuổi trẻ không hối tiếc</p>
+          <p class="right__advertisement__discount-money"> <span>59.000 đ</span></p>
+        </a>
+        <a href="" class="right__advertisement__book-item">
+        
+          <div class="right__advertisement__img-book-info">
+            
+            <img src="../img/book/book5.jpg" alt="" class="book ">
+          </div>
+          <p class="right__advertisement__name-book">vui vẻ không quạu nha</p>
+          <p class="right__advertisement__discount-money"> <span>43.000 đ</span></p>
+        </a>
+        <a href="" class="right__advertisement__book-item">
+        
+          <div class="right__advertisement__img-book-info">
+            
+            <img src="../img/book/book4.jpg" alt="" class="book ">
+          </div>
+          <p class="right__advertisement__name-book">Nhà giả kim</p>
+          <p class="right__advertisement__discount-money"> <span>55.000 đ</span></p>
+        </a> 
+        
+    </div>
+  </div>  
+  </div>
+  <div class="Related-Products">
+  <h3 class="Related-Products__heading">Sách Liên Quan</h3>
+  <div class="content">
+    <div class="book-list row">
+      <a href="" class=" col-6 col-sm-4 .col-md-4 col-lg-3">
+        <div class="book-item">
+          <div class="img-book-info">
+            <div class="discount">
+              <span class="percent">25%</span>
+              <span>Giảm</span>
+            </div>
+            <img src="../img/book/book1.jpg" alt="" class="book ">
+          </div>
+          <p class="name-book">Tuổi trẻ đáng giá ...</p>
+          <p class="discount-money"> <del>87.000đ</del><span>65.000 đ</span></p>
+          <div class="sell-rating">
+            <div class="rating">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">  
+            </div>
+            <div class="sell">đã bán 1.3k</div>
+          </div>
+        </div>
+      </a>
+      <a href=""  class=" col-6 col-sm-4 .col-md-4 col-lg-3">
+        <div class="book-item">
+          <div class="img-book-info">
+          <div class="discount">
+            <span class="percent">42%</span>
+            <span>Giảm</span>
+          </div>
+          <img src="../img/book/book2.jpg" alt="" class="book ">
+           </div>
+        <p class="name-book">Tư duy phản biện</p>
+        <p class="discount-money"> <del>116.000đ</del><span>49.000 đ</span></p>
+          <div class="sell-rating">
+            <div class="rating">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">  
+            </div>
+            <div class="sell">đã bán 1.3k</div>
+          </div>
+        </div>
+        
+      </a>
+      <a href="" class=" col-6 col-sm-4 .col-md-4 col-lg-3">
+        <div class="book-item">
+          <div class="img-book-info">
+          <div class="discount">
+            <span class="percent">25%</span>
+            <span>Giảm</span>
+          </div>
+          <img src="../img/book/book3.jpg" alt="" class="book ">
+          </div>
+          <p class="name-book">Tuổi trẻ không hối tiếc</p>
+          <p class="discount-money"> <del>79.000đ</del><span>59.000 đ</span></p>
+          <div class="sell-rating">
+            <div class="rating">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">  
+            </div>
+            <div class="sell">đã bán 1.3k</div>
+          </div>
+        </div>
+      </a>
+      <a href="" class=" col-6 col-sm-4 .col-md-4 col-lg-3">
+        <div class="book-item">
+          <div class="img-book-info">
+          <div class="discount">
+            <span class="percent">30%</span>
+            <span>Giảm</span>
+          </div>
+          <img src="../img/book/book4.jpg" alt="" class="book ">
+        </div>
+        <p class="name-book">Nhà giả kim</p>
+        <p class="discount-money"> <del>79.000đ</del><span>55.000 đ</span></p>
+          <div class="sell-rating">
+            <div class="rating">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">  
+            </div>
+            <div class="sell">đã bán 1.3k</div>
+          </div>
+        </div>          
+      </a>
+      <a href="" class=" col-6 col-sm-4 .col-md-4 col-lg-3">
+        <div class="book-item">
+          <div class="img-book-info">
+          <div class="discount">
+            <span class="percent">38%</span>
+            <span>Giảm</span>
+          </div>
+          <img src="../img/book/book5.jpg" alt="" class="book">
+        </div>
+        <p class="name-book">vui vẻ không quạu nha</p>
+        <p class="discount-money"> <del>69.000đ</del><span>43.000 đ</span></p>
+          <div class="sell-rating">
+            <div class="rating">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">  
+            </div>
+            <div class="sell">đã bán 1.3k</div>
+          </div>
+        </div>
+      </a>
+      <a href="" class=" col-6 col-sm-4 .col-md-4 col-lg-3">
+        <div class="book-item">
+          <div class="img-book-info">
+          <div class="discount">
+            <span class="percent">28%</span>
+            <span>Giảm</span>
+          </div>
+          <img src="../img/book/book6.jpg" alt="" class="book">
+        </div>
+        <p class="name-book">tâm lí học tội phạm</p>
+        <p class="discount-money"> <del>144.000đ</del><span>104.000 đ</span></p>
+          <div class="sell-rating">
+            <div class="rating">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/star_half.png" alt="star">  
+            </div>
+            <div class="sell">đã bán 794</div>
+          </div>
+        </div>
+        
+      </a>
+      <a href="" class=" col-6 col-sm-4 .col-md-4 col-lg-3">
+        <div class="book-item">
+          <div class="img-book-info">
+          <div class="discount">
+            <span class="percent">33%</span>
+            <span>Giảm</span>
+          </div>
+          <img src="../img/book/book7.jpg" alt="" class="book">
+        </div>
+        <p class="name-book">những gì đã qua đừng nghĩ lại ...</p>
+        <p class="discount-money"> <del>72.000đ</del><span>48.000 đ</span></p>
+          <div class="sell-rating">
+            <div class="rating">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/star_half.png" alt="star">
+              <img src="../img/khac/star_0.png" alt="star">  
+            </div>
+            <div class="sell">đã bán 900</div>
+          </div>
+        </div>
+        
+      </a>
+      <a href="" class=" col-6 col-sm-4 .col-md-4 col-lg-3">
+        <div class="book-item">
+          <div class="img-book-info">
+          <div class="discount">
+            <span class="percent">32%</span>
+            <span>Giảm</span>
+          </div>
+          <img src="../img/book/book8.jpg" alt="" class="book ">
+        </div>
+        <p class="name-book">hôm nay hãy chỉ yêu thôi</p>
+        <p class="discount-money"> <del>115.000đ</del><span>78.000 đ</span></p>
+          <div class="sell-rating">
+            <div class="rating">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/star_0.png" alt="star">  
+            </div>
+            <div class="sell">đã bán 1.0k</div>
+          </div>
+        </div>
+        
+      </a>
+      <a href="" class=" col-6 col-sm-4 .col-md-4 col-lg-3">
+        <div class="book-item">
+          <div class="img-book-info">
+            <div class="discount">
+              <span class="percent">31%</span>
+              <span>Giảm</span>
+            </div>
+            <img src="../img/book/book9.jpg" alt="" class="book ">
+          </div>
+          <p class="name-book">tôi vỡ tan để ánh sáng ngập tràn</p>
+          <p class="discount-money"> <del>99.000đ</del><span>68.000 đ</span></p>
+          <div class="sell-rating">
+            <div class="rating">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/star_half.png" alt="star">  
+            </div>
+            <div class="sell">đã bán 1.3k</div>
+          </div>
+        </div>
+      </a>
+      <a href="" class=" col-6 col-sm-4 .col-md-4 col-lg-3">
+        <div class="book-item">
+          <div class="img-book-info">
+            <div class="discount">
+              <span class="percent">30%</span>
+              <span>Giảm</span>
+            </div>
+            <img src="../img/book/book10.jpg" alt="" class="book">
+          </div>
+          <p class="name-book">Hãy khiến tương lai biết ơn vì hiện tại ...</p>
+          <p class="discount-money"> <del>99.000đ</del><span>69.000 đ</span></p>
+          <div class="sell-rating">
+            <div class="rating">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">  
+            </div>
+            <div class="sell">đã bán 1.1k</div>
+          </div>
+        </div>
+      </a>
+      <a href="" class=" col-6 col-sm-4 .col-md-4 col-lg-3">
+        <div class="book-item">
+          <div class="img-book-info">
+            <div class="discount">
+              <span class="percent">21%</span>
+              <span>Giảm</span>
+            </div>
+            <img src="../img/book/Cấp tốc 789+Ngữ Văn 12.jpg" alt="" class="book book1">
+          </div>
+          <p class="name-book">Cấp tốc 789+ Ngữ Văn 12</p>
+          <p class="discount-money"> <del>200.000đ</del><span>158.000 đ</span></p>
+          <div class="sell-rating">
+            <div class="rating">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/star_0.png" alt="star">  
+            </div>
+            <div class="sell">đã bán 546</div>
+          </div>
+        </div>
+      </a>
+      <a href="" class=" col-6 col-sm-4 .col-md-4 col-lg-3">
+        <div class="book-item">
+          <div class="img-book-info">
+            <div class="discount">
+              <span class="percent">22%</span>
+              <span>Giảm</span>
+            </div>
+            <img src="../img/book/999 bức thư gửi cho chính bạn.jpg" alt="" class="book book1">
+          </div>
+          <p class="name-book">999 bức thư gửi cho chính bạn</p>
+          <p class="discount-money"> <del>320.000đ</del><span>150.000 đ</span></p>
+          <div class="sell-rating">
+            <div class="rating">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">
+              <img src="../img/khac/sao_100.jpg" alt="star">  
+            </div>
+            <div class="sell">đã bán 1.3k</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  </div>
+ 
+</div>     
+<div class="footer">
+  <div id="footer1">
+    <div>
+      <a >
+        <img src="../../general/general_img/icon_fb.png" alt="Facebook">
+        <span>FACEBOOK</span>
+      </a>
+    </div>
+    <div>
+      <a >
+        <img src="../../general/general_img/icon_ins.png" alt="FACEBOOK">
+        <span>INSTAGRAM</span>
+      </a>
+    </div>
+    <div>
+      <a href="#">
+        <img src="../../general/general_img/icon_link.png" alt="LINKEDIN">
+        <span>LINKEDIN</span>
+      </a>
+    </div>
+    <div>
+      <a href="#">
+        <img src="../../general/general_img/icon_prin.png" alt="PINTEREST">
+        <span>PINTEREST</span>
+      </a>
+    </div>
+    <div>
+      <a href="#">
+        <img src="../../general/general_img/icon_redis.png" alt="REDDIT">
+        <span>REDDIT</span>
+      </a>
+    </div>
+    <div>
+      <a href="#">
+        <img src="../../general/general_img/icon_tw.png" alt="TWITTER">
+        <span>TWITTER</span>
+      </a>
+    </div>
+  </div>
+  <div class="row" id="footer2">
+    <div class="col-lg-8">
+      <ul>
+        <li><a href="#">Book Store</a></li>
+        <li><a href="#">About us – Author team</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Group Sách Only</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-4" id="lienhe">
+      <p>© Liên hệ: Nhóm 3 Thiết kế web - CNTT2</p>
+    </div>
+  </div>
+</div>
+   <script src="../../general/general.js"></script>
+</body>
+</html>

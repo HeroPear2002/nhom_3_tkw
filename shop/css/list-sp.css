@@ -1,0 +1,159 @@
+.container{
+    position: absolute;
+    top: 0;
+}
+.path-page{
+    display: flex;
+    width: 90%;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin:  8px auto 0 auto;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.page-list{ 
+    margin: 0;
+    display: flex;
+}
+.page-item-link{
+    font-size: 20px;
+    list-style: none;
+    display: inline-block;
+}
+.page-item-link a{
+    color: #333;
+    font-weight: 600;
+}
+.page-item-link:hover a{
+    color: #73a206;
+    text-decoration: none;
+}
+.bi-link,
+.bi-house-door-fill{
+    margin: 0 8px;
+    position: relative;
+    top: 8px;
+}
+.icon-filter{
+    display: none;
+    position: relative;
+    top: 4px;
+    margin: 0 4px;
+}
+.icon-filter a{
+    color: #333;
+    text-decoration: none;
+}
+.icon-filter a:hover{
+    color: #73a206;
+}
+.filter{
+    background-color: #fff;
+    padding: 12px;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: end;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+.filter-list{
+    display: flex;
+}
+.filter-item{
+    margin: 0 12px;
+}
+.content{
+    display: flex;
+    margin-top: 12px;
+    width: 90%;
+    margin: 0 auto;
+}
+.col-sm-6{
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+.book-item{
+    background-color: #fff;
+    padding: 0;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.img-book-info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+}
+.discount{
+    display: flex;
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 240, 28,0.9);
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 4px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.discount .percent{
+   color: red;
+   font-weight: 500;
+}
+.book-item p{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 200px;
+}
+.book-list{
+    display: flex;
+    margin: auto;
+}
+.book-list a{
+    text-decoration: none;
+    color: #333;
+}
+.book-list a:hover .book-item {
+    opacity: 0.85;
+    border: 0.1px solid #999;
+}
+.discount-money{
+    display: flex;
+    justify-content: space-around;
+    color: red;
+    font-size: 20px;
+}
+.book{
+    width: 100%;
+}
+.name-book{
+    height: 48px;
+}
+
+.sell-rating{
+    display: flex;
+    justify-content:space-around;
+}
+.rating img{
+    width: 12px;
+    display: inline-block;
+}
+.discount-money span{
+    position: relative;
+    bottom: 3px;
+}
+.pagination{
+    justify-content: center;
+}
+.page-link{
+    color:#333;
+}
+.page-link:hover{
+    color: #73a206;
+}
